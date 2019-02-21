@@ -1,0 +1,20 @@
+function startTime() {
+    console.clear();
+    var today = new Date();
+    var hour = today.getHours();
+    var minute = today.getMinutes();
+    var second = today.getSeconds();
+     var year=today.getFullYear();
+    var month=today.getMonth();
+    var date=today.getDate();
+    month = add_zero(month);
+    second = add_zero(second);
+    console.log(date+"/"+month+"/"+year+"  "+hour+":"+minute+":"+second);
+    var t = setTimeout(startTime,1000);
+  }
+  function add_zero(i) {
+    if (i < 10) {i = "0" + i}; 
+    return i;
+  }
+ 
+  startTime();
